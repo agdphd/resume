@@ -1,7 +1,7 @@
 % Derived from:
 % Andrew McNabb's Resume
 % Created: 7 Jan 2004
-% Last Modified: 17 Jul 2004
+% Last Modified: 3 July 2011
 \ProvidesPackage{mcresume}
 
 \usepackage{geometry}
@@ -34,10 +34,10 @@
 	\vspace{4pt}
 	{%\fontfamily{phv}
 	\selectfont\Large#1}
-	\begin{itemize}
+	\begin{list}{\quad}{}
 	\vspace{3pt}
 }{
-	\end{itemize}
+	\end{list}
 }
 
 % A resitem is a simple list element in a ressection (first level)
@@ -58,9 +58,9 @@
 %  Arg 3: Title and/or date range
 \newcommand{\resbigitem}[3]{
 	\vspace{-5pt}
-	\item
-	\textbf{#1}---#2 \\
-	\textit{#3}
+	\item{
+	\textbf{\boldmath\large#1} \hfill \textit{#3} \\
+	#2}
 }
 
 % This is a list that comes with a resbigitem
