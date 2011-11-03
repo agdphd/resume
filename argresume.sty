@@ -4,13 +4,14 @@
 % Last Modified: 3 July 2011
 \ProvidesPackage{argresume}
 
-\usepackage{geometry}
+\usepackage[letterpaper,margin=1in]{geometry}
 \usepackage{comment}
 \usepackage{amsmath,amssymb}
 \usepackage[T1]{fontenc}
 
+\usepackage{fancyhdr}
+
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
 
 \setlength{\parindent}{0in}
 \setlength{\parskip}{0in}
@@ -80,10 +81,9 @@
 	\end{itemize}
 }
 
-\renewcommand{\maketitle}{\bigname{\name} 
+\fancyhead[C]{\bigname{\name} \vspace{-1.5eM} \rule{\textwidth}{1pt} \\ {\small\itshape \addr \hfill \phone; \email} }
+\fancyfoot{}
+\setlength{\voffset}{-.25in}
+\setlength{\headheight}{.5in}
 
-\vspace{-8pt} \rule{\textwidth}{1pt}
-
-\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
-
-\vspace{8 pt}}
+\renewcommand{\maketitle}{\thispagestyle{fancy}}
