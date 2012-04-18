@@ -1,112 +1,23 @@
-\documentclass[oneside]{article}
+\documentclass[11pt]{moderncv}
 
-\usepackage{argresume}
-\usepackage{mathpazo}
-\usepackage{tgpagella}
+\moderncvtheme[grey]{casual}
 
-% Name and contact information
-\newcommand{\name}{Andrew Gainer}
-\newcommand{\addr}{20R Reed St., Apt.\ 1, Cambridge, MA 02140-2414}
-\newcommand{\phone}{(617) 444-9974}
-\newcommand{\email}{againer@brandeis.edu; gainer.andrew@gmail.com}
+\usepackage[margin=1in]{geometry}
 
-\newcommand{\sn}[1]{\ensuremath{\mathbf{#1}}}
+\firstname{Andrew}
+\familyname{Gainer}
+\address{20R Reed Street, Apartment 1}{Cambridge, MA 02140}
+\mobile{(617) 444-9974}
+\email{gainer.andrew@gmail.com}
 
 \begin{document}
 \maketitle
 
-%%%%%%%%%%%%%%%%%%%%%%%% 
-\begin{ressection}{Education}
-  \begin{ressubsec}{Brandeis University}{Waltham, MA}{Fall 2007 --- Spring 2012}
-    \ressubitem{Ph.D. in mathematics, supervisor Dr.\ Ira Gessel}
-  \end{ressubsec}
+\section{Experience}
 
-  \begin{ressubsec}{University of Nebraska IMMERSE}{Lincoln, NE}{Summer 2007}
-    \ressubitem{Took short, intensive courses in introductory graduate-level algebra and analysis}
-  \end{ressubsec}
+\section{Education}
 
-  \begin{ressubsec}{Mercer University}{Macon, GA}{2003--2007}
-    \ressubitem{B.S. (major: mathematics) and B.A. (major: philosophy)}
-    \ressubitem{Graduated \textit{magna cum laude} with University honors as well as `outstanding senior' awards from mathematics and philosophy departments}
-    \ressubitem{Final cumulative G.P.A.: 3.815 (overall), 3.864 (math.), 4.0 (phil.)}
-  \end{ressubsec}
+\section{Research and publications}
 
-  \begin{ressubsec}{Oxford Overseas Study Course}{Oxford, UK}{Spring 2006}
-    \ressubitem{Studied philosophy and eighteenth-century literature with Oxford tutors}
-  \end{ressubsec}
-
-  \begin{ressubsec}{Valparaiso Univerisity VERUM}{Valparaiso, IN}{Summer 2005}
-    \ressubitem{NSF-sponsored REU}
-    \ressubitem{Worked in three-member research team on crystallographic group theory}
-    \ressubitem{Partner in presentations and co-author of paper noted below}
-  \end{ressubsec}
-\end{ressection}
-
-%%%%%%%%%%%%%%%%%%%%%%%% 
-\begin{ressection}{Academic work experience}
-  \begin{ressubsec}{Instructor}{Brandeis Mathematics Department}{Fall 2009}
-    \ressubitem{As a departmental graduate representative, proposed and developed model for some select graduates to teach intermediate courses (linear algebra and multivariable calculus)}
-    \ressubitem{Taught one full-size section (25 students) of linear algebra}
-    \ressubitem{With two graduate colleagues, performed all administrative and curricular duties related to the course with minimal faculty supervision, including supervising graders and administering exams}
-  \end{ressubsec}
-
-  \begin{ressubsec}{Graduate teaching fellow}{Brandeis}{Fall 2008 --- Spring 2010}
-    \ressubitem{Taught one small (10--25 students) section of each of precalculus, first-- and second-semester calculus, and linear algebra}
-  \end{ressubsec}
-
-  \begin{ressubsec}{\LaTeX{} Proofreader}{Harvard Accessible Technologies Lab}{Summers 2008, 2009}
-    \ressubitem{Proofread \LaTeX{} versions of scanned course materials for blind physics Ph.D.\ student}
-  \end{ressubsec}
-
-  \resbigitem{Teaching Assistant, MAT 104 (Finite Mathematics)}{Mercer University}{Spring 2007}
-
-  \resbigitem{Mathematics grader}{Mercer and Brandeis}{various}
-
-  \resbigitem{Mathematics and writing tutor}{Mercer and Brandeis}{various}
-
-  \resbigitem{Mathematics Supplemental Instruction (Recitation) Leader, Calculus I}{Mercer}{Fall 2004}
-\end{ressection}
-
-%%%%%%%%%%%%%%%%%%%%%%%% 
-\begin{ressection}{Research}
-
-  \begin{ressubsec}{$\Gamma$-species, quotients, and graph enumeration}{Brandeis University, Ph.D.\ dissertation, advisor Ira Gessel}{Spring 2012 (expected)}
-    \ressubitem{Developed extension of combinatorial species theory incorporating group quotients}
-    \ressubitem{Enumerated unlabeled general $k$-trees and bipartite blocks using these techniques}
-  \end{ressubsec}
-
-  \begin{ressubsec}{On SIL-freedom in random graphs}{Brandeis, minor examination, advisor Ruth Charney}{Fall 2010--Spring 2011}
-    \ressubitem{Applied combinatorial methods to study the asymptotics of a graph property related to Dr.\ Charney's ongoing research in geometric group theory}
-  \end{ressubsec}
-
-  \begin{ressubsec}{Species enumeration of bipartite graphs and blocks}{Brandeis University, sponsored summer research, advisor Ira Gessel}{Summer 2010}
-    \ressubitem{Developed a model of bipartite graphs using theory of quotient species}
-    \ressubitem{Applied and integrated methods in species theory to enumerate bipartite graphs and blocks}
-  \end{ressubsec}
-
-  \begin{ressubsec}{PL boundaries of surfaces which immerse isometrically in $\sn{R}^2$}{Mercer University, mathematics department honors project, advisor Margaret Symington}{Fall 2006 -- Spring 2007}
-    \ressubitem{Explored sufficient conditions for the existence of isometric immersions of flat low-genus surfaces with piecewise-linear boundaries with prescribed turning at each vertex}
-    \ressubitem{Developed paper with full background and exposition for departmental honors requirements}
-    \ressubitem{Research topic derived from Dr. Symington's work with Dr. David Gay on near-symplectic $4$-manifolds}
-    \ressubitem{Received Undergraduate Poster Session Prize at 2007 Joint Meetings for poster on this research}
-  \end{ressubsec}
-
-  \begin{ressubsec}{Virtually cyclic subgroups of 3-dimensional crystallographic groups}{Valparaiso University VERUM (NSF-sponsored REU), advisor Kimberly Pearson}{Summer 2005}
-    \ressubitem{As part of a three-undergraduate team, applied algebraic, linear-algebraic, and geometric methods to enumerate the virtually-cyclic subgroups of the three-dimensional crystallographic groups}
-    \ressubitem{Co-authored a paper and delivered several conference and colloquium presentations}
-  \end{ressubsec}
-
-  \begin{ressubsec}{Lattice orderings on $\sn{Q} \left[\sqrt{n}\right]$}{Mercer University, independent research, advisor David Nelson}{Spring 2005}
-    \ressubitem{Studied lattice orderings on the field $\sn{Q} \left[\sqrt{n}\right]$ (for $n$ squarefree), using the Maple computer algebra system to identify qualitative properties before formalizing the results algebraically}
-  \end{ressubsec}
-\end{ressection}
-
-\begin{ressection}{Departmental service}
-  \begin{ressubsec}{Graduate student representative}{Brandeis}{Fall 2008--Spring 2012}
-    \ressubitem{Co-coordinated departmental graduate seminar}
-    \ressubitem{Co-coordinated semiannual department barbecues}
-    \ressubitem{Co-coordinated weekly department tea}
-    \ressubitem{Represented graduate students in departmental decision-making including funds allocation and graduate teaching requirements}
-  \end{ressubsec}
-\end{ressection}
+\section{Departmental service}
 \end{document}
