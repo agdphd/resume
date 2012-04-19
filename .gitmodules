@@ -1,0 +1,3 @@
+[submodule "publist"]
+	path = publist
+	url = ../publist

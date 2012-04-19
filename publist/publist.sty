@@ -1,0 +1,23 @@
+\ProvidesPackage{publist}
+
+% PDFLaTeX commands
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+
+\usepackage{hyperref}
+
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{tgpagella}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage[mathscr]{eucal}
+\usepackage{units,faktor}
+
+\usepackage[letterpaper, margin=1.0in]{geometry}
+
+\usepackage{setspace}
+
+\renewcommand{\maketitle}{\begin{spacing}{1}\begin{center} \textbf{\Large \@title} \\ \@author \end{center}\end{spacing}}
+
+\renewcommand{\refname}{}
