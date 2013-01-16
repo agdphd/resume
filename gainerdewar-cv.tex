@@ -1,8 +1,68 @@
-\documentclass[11pt]{moderncv}
+\documentclass[11pt,letter]{moderncv}
 
 \moderncvtheme[grey]{casual}
 
 \usepackage[margin=1in]{geometry}
+
+\usepackage{background}
+
+\usepackage{tkz-graph}
+\usetikzlibrary{arrows,shapes,decorations.markings}
+
+\tikzstyle{every picture}+=[
+  xnode/.style={fill=gray!20,shape=rectangle,draw},
+  ynode/.style={fill=white!100,shape=circle,draw},
+  enode/.style={fill=white!100,shape=rectangle,draw}
+]
+
+\newcommand*{\cyccwl}[2][.5cm]{\draw[decoration={markings, mark=at position .5 with {\arrowreversed{triangle 90}}}, postaction={decorate}] #2 circle (#1)}
+
+\newcommand*{\cycccwl}[2][.5cm]{\draw[decoration={markings, mark=at position .5 with {\arrow{triangle 90}}}, postaction={decorate}] #2 circle (#1)}
+
+\newcommand*{\cyccwr}[2][.5cm]{\draw[decoration={markings, mark=at position 0 with {\arrowreversed{triangle 90}}}, postaction={decorate}] #2 circle (#1)}
+
+\newcommand*{\cycccwr}[2][.5cm]{\draw[decoration={markings, mark=at position 0 with {\arrow{triangle 90}}}, postaction={decorate}] #2 circle (#1)}
+
+\backgroundsetup{
+  color=black!12,
+  scale=4,
+  angle=-47,
+  hshift=-15,
+  vshift=-7,
+  contents={
+    \begin{tikzpicture}
+      \def\nodesep{2.5cm}
+      \def\cycrad{0.4cm}
+      \node[style=ynode] (a) at (0, 0) {};
+      \node[style=ynode,above left = \nodesep] at (a) (d) {};
+      \node[style=ynode,above right = \nodesep] at (a) (f) {};
+      \node[style=ynode,above right = \nodesep] at (d) (c) {};
+      \node[style=ynode,left = \nodesep] at (d) (b) {};
+      \node[style=ynode,above = \nodesep] at (f) (e) {};
+      %
+      \path [draw, thick] (a) to node[style=enode] (4) {} (c);
+      \path [draw, thick] (a) to node[style=enode] (9) {} (f);
+      \path [draw, thick] (a) to node[style=enode] (2) {} (d);
+      \path [draw, thick] (a) to node[style=enode] (1) {} (b);
+      \path [draw, thick] (b) to node[style=enode] (6) {} (c);
+      \path [draw, thick] (d) to node[style=enode] (5) {} (c);
+      \path [draw, thick] (f) to node[style=enode] (3) {} (c);
+      \path [draw, thick] (c) to node[style=enode] (8) {} (e);
+      \path [draw, thick] (f) to node[style=enode] (7) {} (e);
+      %
+      \node [style=xnode] (A) at (barycentric cs:f=1,c=1,e=1.75) {};
+      \node [style=xnode] (B) at (barycentric cs:a=1,d=1.25,c=1) {};
+      \node [style=xnode] (C) at (barycentric cs:a=1,c=1,f=1.25) {};
+      \node [style=xnode] (D) at (barycentric cs:b=1,d=1.25) {};
+      %
+      \cyccwl[\cycrad]{(A)};
+      \cyccwr[\cycrad]{(B)};
+      \cycccwl[\cycrad]{(C)};
+      \cyccwr[\cycrad]{(D)};
+      %
+    \end{tikzpicture}
+  }
+}
 
 \usepackage{mathpazo}
 \renewcommand{\sfdefault}{\rmdefault}
