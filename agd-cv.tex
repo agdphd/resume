@@ -26,6 +26,28 @@
 \homepage{people.carleton.edu/\string~againerdewar}
 \social[github]{againerdewar}
 
+% Format publication list per http://tex.stackexchange.com/a/123818
+\renewbibmacro*{date}{}
+\renewbibmacro*{date+extrayear}{}
+\renewbibmacro*{issue+date}{}
+\renewbibmacro*{date:labelyear+extrayear}{\textbf{[\printfield{labelnumber}]}}
+\newcommand*{\bibyear}{}
+\defbibenvironment{bibliography}
+  {\list
+     {\iffieldequals{year}{\bibyear}
+        {}
+        {\printfield{year}%
+         \savefield{year}{\bibyear}}}
+     {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
 \begin{document}
 \maketitle
 \vspace*{-.5in}
