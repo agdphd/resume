@@ -1,13 +1,9 @@
-\documentclass[10pt,twoside]{moderncv}
+\documentclass[12pt,twoside,colorlinks,urlcolor=blue]{moderncv}
 
 \moderncvstyle{casual}
-\moderncvcolor{black}
+\moderncvcolor{grey}
 
 \usepackage[margin=1in,top=0.5in,letterpaper]{geometry}
-
-\usepackage[bibstyle=publist/publist,backend=biber]{biblatex}
-\addbibresource{publist/agd-publist.bib}
-\omitname{Gainer-Dewar}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -15,38 +11,33 @@
 \usepackage[libertine]{newtxmath}
 \usepackage{inconsolata}
 
+\usepackage{footmisc}
+
+\let\oldnamefont\namefont
+\renewcommand*{\namefont}{\oldnamefont\sffamily}
+
+\let\oldtitlefont\titlefont
+\renewcommand*{\titlefont}{\oldtitlefont\sffamily}
+
+\let\oldsectionfont\sectionfont
+\renewcommand*{\sectionfont}{\oldsectionfont\bfseries\sffamily}
+
+\let\oldsubsectionfont\subsectionfont
+\renewcommand*{\subsectionfont}{\oldsubsectionfont\sffamily}
+
+%\usepackage[default]{sourcesanspro}
+%\usepackage{sourcecodepro}
+
 \usepackage{csquotes}
 
 \usepackage{microtype}
 
 \name{Andrew R.}{Gainer-Dewar}
-\address{Three Hundred Pulteney Street}{Geneva, NY 14456}
-\phone{(315) 781-3607}
-\email{gainerdewar@hws.edu}
+\address{16 Worthington Avenue}{Geneva, NY 14456-2825}
+\phone{(617) 444-9974}
+\email{andrew.gainer.dewar@gmail.com}
 \homepage{math.hws.edu/gainerdewar}
 \social[github]{againerdewar}
-
-% Format publication list per http://tex.stackexchange.com/a/123818
-\renewbibmacro*{date}{}
-\renewbibmacro*{date+extrayear}{}
-\renewbibmacro*{issue+date}{}
-\renewbibmacro*{date:labelyear+extrayear}{\textbf{[\printfield{labelnumber}]}}
-\newcommand*{\bibyear}{}
-\defbibenvironment{bibliography}
-  {\list
-     {\iffieldequals{year}{\bibyear}
-        {}
-        {\printfield{year}%
-         \savefield{year}{\bibyear}}}
-     {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
-      \setlength{\labelwidth}{\hintscolumnwidth}%
-      \setlength{\labelsep}{\separatorcolumnwidth}%
-      \setlength{\itemsep}{\bibitemsep}%
-      \leftmargin\labelwidth%
-      \advance\leftmargin\labelsep}%
-      \sloppy\clubpenalty4000\widowpenalty4000}
-  {\endlist}
-  {\item}
 
 \begin{document}
 \maketitle
@@ -58,95 +49,138 @@
   Supervisor: Ira M.~Gessel
 }
 
-\cventry{2003--2007}{B.S.\ (Mathematics) \& B.A.\ (Philosophy)}{Mercer University}{Macon, GA}{}{}
-
-\section{Professional appointments}
-\cventry{2014--2015}{Visiting asst.\ prof.\ of mathematics}{Hobart and William Smith Colleges}{Geneva, NY}{}{}
-
-\cventry{2012--2014}{Visiting asst.\ prof.\ of mathematics}{Carleton College}{Northfield, MN}{}{}
-
-\section{Research interests}
-\cvitem{}{Enumerative combinatorics, combinatorial graph theory, combinatorial species, combinatorial molecular biology.}
-
-\section{Professional memberships and recognition}
-\cventry{2014}{AMS-MRC participant}{Algebraic and Geometric Methods in Applied Discrete Mathematics}{}{}{}
-\cventry{2013--2014}{MAA National Project NExT Fellow}{}{}{}{}
-\cventry{2013--}{Member, Mathematical Association of America}{}{}{}{}
-\cventry{2008--}{Member, American Mathematical Society}{}{}{}{}
-
-\section{Teaching}
-\cventry{2014--2015}{Hobart and William Smith Colleges}{4/yr}{}{}{
-  Calculus I, Calculus II, \enquote{Discovering in Mathematics}
+\cventry{2003--2007}{B.S.\ (Mathematics) \& B.A.\ (Philosophy)}{Mercer University}{Macon, GA}{}{
+  Cumulative GPA: 3.82
 }
 
-\cventry{2012--2014}{Carleton College}{5/yr}{}{}{
-  Calculus I, Calculus II, Linear Algebra, Graph Theory (indep.\ study)\\
-  \enquote{The Mathematics of Democracy} (first-year seminar)
+\section{Professional experience}
+\cventry{2014--2015}{Visiting assistant professor of mathematics}{Hobart and William Smith Colleges}{Geneva, NY}{}{
+  \begin{itemize}
+  \item
+    Taught Calculus I (ca.~28 students each in three sections), \enquote{Discovering in Mathematics} (18 students)
+  \item
+    \enquote{Flipped} calculus classes to increase student engagement and retention
+  \end{itemize}
 }
 
-\cventry{2008--2010}{Brandeis University (graduate instructor)}{2/yr}{}{}{
-  Precalculus, Calculus I, Calculus II, Linear Algebra
+\cventry{2012--2014}{Visiting assistant professor of mathematics}{Carleton College}{Northfield, MN}{}{
+  \begin{itemize}
+  \item
+    Taught Calculus I \& II (ca.~30 students each in eight sections), Linear Algebra (12 students), \enquote{The Mathematics of Democracy} (14 students)
+  \item
+    Supervised eight students in two senior research projects
+  \item
+    Published three papers in enumerative graph theory (available on \href{http://arxiv.org/a/gainer_a_1}{arXiv})
+  \end{itemize}
 }
 
-\section{Undergraduate scholarship supervised}
-\cventry{2013--2014}{The graph algorithm for the boolean number of a Coxeter system}{Carleton}{}{}{
-  Four students, independent original research
+\cventry{2007--2012}{Graduate fellow}{Brandeis University}{Waltham, MA}{}{
+  \begin{itemize}
+  \item
+    Taught four sections: Calculus I \& II, Precalculus, Linear algebra (ca.~25 students each)
+  \item
+    Served as graduate student representative to the Department
+  \end{itemize}
 }
-\cventry{2012--2013}{On the species of bipartite point-determining graphs}{Carleton}{}{}{
-  Four students, independent original research
+
+\section{Projects and contributions}
+\cventry{2014--}{iB4e-GTFold-parametrizer}{AMS-MRC collaboration}{}{}{
+  \begin{itemize}
+  \item
+    Wrote software to analyze RNA folding parameters using C++ with CGAL and Boost
+  \item
+    Developing Python API in SWIG for testing and research
+  \item
+    Implemented Huggins' \texttt{iB4e} algorithm and extensively modified GTFold structure prediction code
+  \item
+    Source available on GitHub\footnotemark[1]{}
+  \end{itemize}
+}
+\footnotetext[1]{\url{http://github.com/AMS-MRC-disc-math-bio/iB4e-GTfold-parametrizer}}
+
+\cventry{2014--}{Calculus: a reader}{}{}{}{
+  \begin{itemize}
+  \item
+    Wrote sections of CC-licensed two-semester calculus textbook designed for self-study and readability
+  \item
+    Designed attractive \LaTeX{} class and styles using Ti\textit{k}Z and \texttt{memoir}  \item
+    Designed all figures in \textit{Asymptote} vector graphics language
+  \item
+    Offered live builds through Share\LaTeX{} \enquote{Cloud Compiler} CI service\footnotemark[2]{}
+  \item
+    Source available on GitHub\footnotemark[3]{}
+  \end{itemize}
+}
+\footnotetext[2]{\url{https://www.sharelatex.com/github/repos/againerdewar/calculus-reader}}
+\footnotetext[3]{\url{http://github.com/againerdewar/calculus-reader}}
+
+\cventry{2013}{Carleton \LaTeX{} workshop}{Carleton math/stats department}{}{}{
+  \begin{itemize}
+  \item
+    Designed and supported \LaTeX{} templates and documentation for novice math majors
+  \item
+    Designed and delivered series of one-hour workshops on various \LaTeX{} topics
+  \item
+    Source available on GitHub\footnotemark[4]{}
+  \item
+    Materials distributed on workshop wiki page\footnotemark[5]{} and as Write\LaTeX{} templates
+  \end{itemize}
+}
+\footnotetext[4]{\url{http://github.com/carletonlatexworkshop}}
+\footnotetext[5]{\url{http://math.carleton.edu/latex}}
+
+\cventry{2012--}{Contributor}{Sage computer algebra system}{}{}{
+  \begin{itemize}
+  \item
+    Developed and documented class implementing $\Gamma$-cycle indices
+  \item
+    Implemented and documented several algebraic operations on classical cycle indices
+  \item
+    Contributions available on Sage trac\footnotemark[6]{}
+  \end{itemize}
+}
+\footnotetext[6]{\url{http://trac.sagemath.org/query?reporter=agd}}
+
+\section{Technical skills}
+
+\subsection{Programming languages}
+\cvitem{}{
+  C++,
+  Python,
+  Sage,
+  Maple
 }
 
-\section{Grants awarded}
-\cventry{2015}{Branching parameters for RNA folding}{AMS-MRC followup collaboration grant}{AMS}{}{}
-\cventry{2014}{AMS-MRC participation grant}{}{AMS, NSF}{}{}
-\cventry{2014}{\LaTeX{} workshop}{Development funding}{Carleton College Mathematics Department}{}{}
-\cventry{2013--2014}{Project NExT fellowship}{}{MAA, Mary P.~Dolciani Foundation, Carleton College}{}{}
+\subsection{Web technologies}
+\cvitem{}{
+  Apache,
+  nginx,
+  CSS,
+  HTML,
+  Bootstrap,
+  ruhoh
+}
 
-\section{Presentations and talks}
-\subsection{Research (invited)}
-\cventry{2014}{\boldmath{$\Gamma$}-species and the enumeration of unlabeled bipartite blocks}{}{}{}{}
-\cvlistitem{St.~Olaf College Math, Statistics, and Computer Science research seminar}
-\cvlistitem{Minnesota State University Mankato mathematics seminar}
-\cvlistitem{University of Minnesota combinatorics seminar}
+\subsection{Development and systems administration}
+\cvitem{}{
+  Linux,
+  Debian,
+  Windows,
+  OSX,
+  Bash,
+  ZSH,
+  Git,
+  MySQL
+}
 
-\subsection{Research (other)}
-\cventry{2015}{Species with an equivariant group action}{Joint Mathematics Meetings}{San Antonio}{}{}
-
-\cventry{2014}{Enumeration of bipartite graphs and blocks}{Joint Mathematics Meetings}{Baltimore}{}{}
-
-\cventry{2013}{\boldmath{$\Gamma$}-species and the enumeration of \boldmath{$k$}-trees}{Joint Mathematics Meetings}{San Diego}{}{}
-
-\cventry{2012}{Contemporary graph enumeration and \boldmath{$k$}-trees}{Brandeis}{Ph.D.\ defense}{}{}
-
-\subsection{Undergraduate}
-\cventry{2014}{The mathematics of democracy}{Carleton}{}{}{}
-
-\cventry{2013}{Making strategy count: combinatorial game theory and the surreal numbers}{Carleton}{}{}{}
-
-\cventry{2012}{Arrow's Theorem and the impossibility of democracy}{Carleton \& Brandeis}{}{}{}
-
-\subsection{Pedagogy}
-\cventry{2015}{Writing and mathematics in a first-year seminar}{Joint Mathematics Meetings}{San Antonio}{}{}
-\cventry{2014}{A\&I: not just for humanists anymore}{Carleton Learning and Teaching Center}{panelist}{}{Panel discussion of approaches for running first-year seminars outside the humanities}
-
-\section{Service}
-\cventry{2014--}{Mathematical Reviews contributor}{AMS}{}{}{}
-\cventry{2013--2014}{Department \LaTeX{} workshop developer and coordinator}{Carleton}{}{}{}
-\cventry{2013--2014}{Department newsletter \enquote{Problem of the Week} editor}{Carleton}{}{}{}
-\cventry{2013}{JMM-2014 panel sessions coordinator}{Project NExT}{}{}{}
-\cventry{2013}{Sophmore writing portfolio reader}{Carleton}{}{}{}
-\cventry{2013--}{Contributor to Sage computer algebra system}{}{trac: \href{http://trac.sagemath.org/sage_trac/query?reporter=agd}{agd}}{}{}
-\cventry{2013--}{JMM Undergraduate Poster Session Judge}{}{}{}{}
-\cventry{2012--2014}{Department social coordinator}{Carleton}{}{}{}
-\cventry{2012--2013}{Math GRE preparation coordinator}{Carleton}{}{}{}
-\cventry{2008--2012}{Graduate student representative and social coordinator}{Brandeis}{}{}{}
-
-\section{Publications and preprints}
-\nocite{*}
-\subsection{Mathematical research}
-\printbibliography[heading=none,notkeyword=preprint]{}
-
-\subsection{Preprints}
-\printbibliography[heading=none,keyword=preprint]{}
-
+\subsection{Document production}
+\cvitem{}{
+  Emacs,
+  vim,
+  \LaTeX{},
+  Markdown,
+  ePub,
+  Microsoft Office,
+  Scribus
+}
 \end{document}
