@@ -1,9 +1,9 @@
-\documentclass[12pt,twoside,colorlinks,urlcolor=blue]{moderncv}
+\documentclass[12pt,colorlinks,urlcolor=blue]{moderncv}
 
 \moderncvstyle{casual}
 \moderncvcolor{grey}
 
-\usepackage[margin=0.5in,bottom=1in,letterpaper]{geometry}
+\usepackage[margin=0.8in,bottom=1.5in,letterpaper]{geometry}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -29,70 +29,60 @@
 
 \usepackage{microtype}
 
-\name{Andrew R.}{Gainer-Dewar}
-\address{16 Worthington Avenue}{Geneva, NY 14456-2825}
+\name{Andrew R.}{Gainer-Dewar, Ph.D.}
+\address{75 Judd Avenue}{New Britain, CT 06051-1725}
 \phone{(617) 444-9974}
 \email{andrew.gainer.dewar@gmail.com}
-\homepage{math.hws.edu/gainerdewar}
 \social[github]{agdphd}
-\social[twitter]{agdphd}
 
 \begin{document}
+\vspace*{-.5in}
 \maketitle
 \vspace*{-.5in}
 
-\section{Summary of qualifications}
-\cvlistitem{Develops mathematics and mathematical biology research software in Python and C++, including contributions to community projects}
-\cvlistitem{Applies abstract algebra and computational geometry to combinatorial problems in graph theory and molecular biology}
-\cvlistitem{Administers Linux and services including Apache and MySQL}
-\cvlistitem{Designs websites using CSS, HTML, and Bootstrap}
-\cvlistitem{Holds Ph.D.~in enumerative combinatorics with several years of research and publishing experience}
-\cvlistitem{Teaches and writes technical material for novice and advanced audiences}
+\section{Summary of qualification}
+\cvlistitem{Ph.D.~mathematician, passionate about algorithmics and writing software excellently.}
+\cvlistitem{Five years experience designing, implementing, and evaluating algorithms (both novel and from literature) for a variety of hard computational problems.}
+\cvlistitem{Proficient in C++, Python, Linux, and Git.}
+\cvlistitem{Successful researcher, collaborator, teacher, and research mentor.}
 
 \section{Education}
-\cventry{2007--2012}{Ph.D.\ (Mathematics)}{Brandeis University}{Waltham, MA}{}{
-  Thesis: \enquote{$\Gamma$-species, quotients, and graph enumeration}\\
-  Supervisor: Ira M.~Gessel
-}
+\cventry{2007--2012}{Ph.D.\ (Mathematics)}{Brandeis University}{Waltham, MA}{}{}
 
-\cventry{2003--2007}{B.S.\ (Mathematics) \& B.A.\ (Philosophy)}{Mercer University}{Macon, GA}{}{
-  Cumulative GPA: 3.82
-}
+\cventry{2003--2007}{B.S.\ (Mathematics) \& B.A.\ (Philosophy)}{Mercer University}{Macon, GA}{}{}
 
 \section{Professional experience}
+\cventry{2015--}{University postdoctoral fellow}{UConn Health Center for Quantiative Medicine}{Farmington}{CT}{
+  \begin{itemize}
+  \item
+    Surveyed approximately two dozen algorithms from several domains for the NP-complete \textsc{Minimal Hitting Set} problem, implemented an evaluative benchmarking suite, and wrote a survey paper with the results (submitted)
+  \end{itemize}
+}
+
 \cventry{2014--2015}{Visiting assistant professor of mathematics}{Hobart and William Smith Colleges}{Geneva, NY}{}{
   \begin{itemize}
   \item
-    Taught Calculus I (ca.~28 students each in three sections), \enquote{Discovering in Mathematics} (18 students)
+    Wrote \texttt{pmfe}, a C++ application integrating state-of-the-art RNA folding prediction algorithms with computational geometry and geometric combinatorics to study parameter sensitivity
   \item
-    \enquote{Flipped} calculus classes to increase student engagement and retention
-  \item
-    Will administer department Linux server and services for Spring 2015
+    Taught ca.~100 students across four sections
   \end{itemize}
 }
 
 \cventry{2012--2014}{Visiting assistant professor of mathematics}{Carleton College}{Northfield, MN}{}{
   \begin{itemize}
   \item
-    Taught Calculus I \& II (ca.~30 students each in eight sections), Linear Algebra (12 students), \enquote{The Mathematics of Democracy} (14 students)
+    Taught ca.~250 students across ten sections
   \item
     Supervised eight students in two senior research projects
   \item
-    Published three papers in enumerative graph theory (available on \href{http://arxiv.org/a/gainer_a_1}{arXiv})
-  \end{itemize}
-}
-
-\cventry{2008--2009}{\LaTeX{} proofreader}{Harvard Accessible Technologies Lab}{Cambridge, MA}{}{
-  \begin{itemize}
-  \item
-    Proofread \LaTeX{} versions of scanned course materials for blind Ph.D.~student
+    Initiated, organized, and ran introductory \LaTeX{} workshops for new majors
   \end{itemize}
 }
 
 \cventry{2007--2012}{Graduate fellow}{Brandeis University}{Waltham, MA}{}{
   \begin{itemize}
   \item
-    Taught four sections: Calculus I \& II, Precalculus, Linear algebra (ca.~25 students each)
+    Taught ca.~100 students across four sections
   \item
     Served as graduate student representative to the Department
   \item
@@ -100,121 +90,25 @@
   \end{itemize}
 }
 
-\section{Projects and contributions}
-\cventry{2014--}{iB4e-GTFold-parametrizer}{AMS-MRC collaboration}{}{}{
-  \begin{itemize}
-  \item
-    Wrote software to analyze RNA folding parameters using C++ with CGAL and Boost
-  \item
-    Developing Python API in SWIG for testing and research
-  \item
-    Writing unit tests for C++ and Python modules
-  \item
-    Implemented Huggins's \texttt{iB4e} algorithm and extensively modified GTFold structure prediction code
-  \item
-    Source available on Github\footnotemark[1]{}
-  \end{itemize}
-}
-\footnotetext[1]{\url{http://github.com/AMS-MRC-disc-math-bio/iB4e-GTfold-parametrizer}}
-
-\cventry{2014--}{Calculus: a reader}{}{}{}{
-  \begin{itemize}
-  \item
-    Wrote sections of CC-licensed two-semester calculus textbook designed for self-study and readability
-  \item
-    Designed attractive \LaTeX{} class and styles using Ti\textit{k}Z and \texttt{memoir}
-  \item
-    Designed all figures in \textit{Asymptote} vector graphics language
-  \item
-    Offered live builds through Share\LaTeX{} \enquote{Cloud Compiler} CI service\footnotemark[2]{}
-  \item
-    Source available on Github\footnotemark[3]{}
-  \end{itemize}
-}
-\footnotetext[2]{\url{https://www.sharelatex.com/github/repos/agdphd/calculus-reader}}
-\footnotetext[3]{\url{http://github.com/agdphd/calculus-reader}}
-
-\cventry{2013--}{Personal website}{}{}{}{
-  \begin{itemize}
-  \item
-    Designed and implemented site and blog using CSS, HTML, and Bootstrap in ruhoh static blogging engine
-  \item
-    Source available on Github\footnotemark[4]{} and hosted by HWS\footnotemark[5]{}
-  \end{itemize}
-}
-\footnotetext[4]{\url{https://github.com/agdphd/personal-site}}
-\footnotetext[5]{\url{http://math.hws.edu/gainerdewar/}}
-
-\cventry{2013}{Carleton \LaTeX{} workshop}{Carleton math/stats department}{}{}{
-  \begin{itemize}
-  \item
-    Designed and supported \LaTeX{} templates and documentation for novice math majors
-  \item
-    Designed and delivered series of one-hour workshops on various \LaTeX{} topics
-  \item
-    Source available on Github\footnotemark[6]{}
-  \item
-    Materials distributed on workshop wiki page\footnotemark[7]{} and as Write\LaTeX{} templates
-  \end{itemize}
-}
-\footnotetext[6]{\url{http://github.com/carletonlatexworkshop}}
-\footnotetext[7]{\url{http://math.carleton.edu/latex}}
-
-\cventry{2012--}{Contributor}{Sage computer algebra system}{}{}{
-  \begin{itemize}
-  \item
-    Developed and documented class implementing $\Gamma$-cycle indices
-  \item
-    Implemented and documented several algebraic operations on classical cycle indices
-  \item
-    Contributions available on Sage trac\footnotemark[8]{}
-  \end{itemize}
-}
-\footnotetext[8]{\url{http://trac.sagemath.org/query?reporter=agd}}
-
 \section{Technical skills}
 
-\subsection{Programming languages}
+\subsection{Programming languages and frameworks}
 \cvitem{}{
   C++,
   Python,
-  Sage,
-  Maple
+  OpenMP,
+  MPI,
+  Sage
 }
 
-\subsection{Web technologies}
+\subsection{Other computer skills}
 \cvitem{}{
-  Apache,
-  nginx,
-  CSS,
-  HTML,
-  Bootstrap,
-  ruhoh
-}
-
-\subsection{Development and systems administration}
-\cvitem{}{
-  Linux,
-  Debian,
+  Linux (incl.~administration),
   Windows,
   OSX,
-  Bash,
-  ZSH,
-  IPTables,
   Git,
-  MySQL
-}
-
-\subsection{Document production}
-\cvitem{}{
-  Emacs,
-  vim,
-  regular expressions,
   \LaTeX{},
-  Markdown,
-  ePub,
-  Microsoft Office,
-  Scribus
+  Microsoft Office
 }
 \end{document}
 
