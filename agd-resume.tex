@@ -1,0 +1,128 @@
+\documentclass[12pt,colorlinks,urlcolor=blue]{moderncv}
+
+\moderncvstyle{casual}
+\moderncvcolor{grey}
+
+\usepackage[margin=0.7in,letterpaper]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage{inconsolata}
+
+\usepackage{comment}
+
+\let\oldnamefont\namefont
+\renewcommand*{\namefont}{\oldnamefont\sffamily}
+
+\let\oldtitlefont\titlefont
+\renewcommand*{\titlefont}{\oldtitlefont\sffamily}
+
+\let\oldsectionfont\sectionfont
+\renewcommand*{\sectionfont}{\oldsectionfont\bfseries\sffamily}
+
+\let\oldsubsectionfont\subsectionfont
+\renewcommand*{\subsectionfont}{\oldsubsectionfont\sffamily}
+
+\usepackage{csquotes}
+
+\usepackage{microtype}
+
+\name{Andrew R.}{Gainer-Dewar, Ph.D.}
+\email{andrew.gainer.dewar@gmail.com}
+\social[github]{agdphd}
+\social[linkedin]{agdphd}
+
+\begin{document}
+\vspace*{-.5in}
+\maketitle
+\vspace*{-.5in}
+
+\section{Summary of qualifications}
+I'm a software engineer and mathematician with development experience in C++, Java, and Python on Linux and Unix-like platforms.
+
+I love building elegant, useful solutions to challenging problems.
+I'm passionate about writing code that's stable, efficient, and well-tested (even if I am still learning how to do pull it off in practice).
+I'm comfortable combining my own ideas and those of my collaborators, insights from academic literature, and libraries as needed to get it done.
+I never prematurely optimize and I love to use the right language for the job.
+
+My recent work includes applying computational geometry to RNA folding prediction, using combinatorics to analyze cell signalling networks, and implementing graph algorithms for the open-source library JGraphT.
+
+\section{Languages and skills}
+\cvitem{\textbf{Python} (7yr)}{
+  I use Python extensively for scripting data analysis and workflow management.
+  I also used the Python-based computer algebra system SageMath extensively for my thesis, including implementing several classes and submitting a variety of bugfixes.
+  I also use Python extensively for hobby competitive programming.
+  Python's extremely lightweight and flexible style is awesome, but I can't help but miss static types when they're gone.
+}
+
+\cvitem{\textbf{Java} (1yr)}{
+  I rewrote an application that runs on the Cytoscape network-analysis platform from the ground up.
+  These ten thousand lines of code run the gamut from UI implementation in Swing to a class heirarchy implementing user-selectable alternatives for combinatorial algorithms.
+  I also submitted several algorithms and bugfixes to the open-source JGraphT library.
+  I greatly appreciate the new stream functional features in Java 8 and the comfort of static types, even if I do sometimes have to write a \texttt{RunnerTaskContextBuilderFactory}.
+}
+
+\cvitem{\textbf{C++} (2yr)}{
+  I rebuilt the \texttt{gtmfe} RNA folding prediction software to use rational arithmetic from the \texttt{GMP} library, then used it as a module for a computational geometry package I wrote using the \texttt{CGAL} library.
+  I also implemented a variety of algorithms for the Minimal Hitting Set Enumeration problem as library modules which are available under an open license on GitHub.
+  C++ is currently my weakest language of these three, but I'm happy to pick it up again.
+}
+
+\cvitem{\textbf{Math} (10yr+)}{
+  My Ph.D.~thesis was in enumerative combinatorics and graph theory.
+  I've also worked on computational geometry and combinatorial biology, and I'm comfortable picking up new domains and skills as needed.
+  Mathematicians solve a problem by breaking it down into bite-size pieces, finding the right abstractions, and then using the really big hammers in the literature (and maybe a few of their own invention) to smash it.
+  That's how I like to code, too.
+}
+
+\cvitem{\bfseries Miscellany}{
+  I have used Linux (primarily Debian) in personal and work environments for nearly twenty years and am completely comfortable on the command line and with lightweight systems administration.
+  I use Git for nearly every line of code I produce (including my Ph.D.~thesis, my dotfiles, and this r\'{e}sum\'{e}) and have numerous projects on GitHub.
+}
+
+\clearpage
+
+\section{Professional experience}
+\cventry{2015--07/2016}{University postdoctoral fellow}{UConn Health}{Farmington, CT}{}{
+  \begin{itemize}
+  \item
+    Rewrote \texttt{OCSANA}, a Java/\texttt{Cytoscape} application applying network-theoretic and combinatorial algorithms to problems in systems biology, achieving $10000\times$ speedup on typical inputs
+  \item
+    Implemented custom benchmark framework with Python and Docker to evaluate two dozen algorithms for core combinatorial problem
+  \item
+    Implemented several of the above algorithms in C++ and released them as an open-source library
+  \item
+    Submitted several algorithms and bugfixes to the open-source JGraphT library
+  \end{itemize}
+}
+
+\cventry{2014--2015}{Visiting assistant professor of mathematics}{Hobart and William Smith Colleges}{Geneva, NY}{}{
+  \begin{itemize}
+  \item
+    Wrote \texttt{pmfe}, a C++ application integrating state-of-the-art RNA folding prediction algorithms with computational geometry and geometric combinatorics to study parameter sensitivity
+  \end{itemize}
+}
+
+\cventry{2012--2014}{Visiting assistant professor of mathematics}{Carleton College}{Northfield, MN}{}{}
+
+\cventry{2007--2012}{Graduate fellow}{Brandeis University}{Waltham, MA}{}{
+  \begin{itemize}
+  \item
+    Completed thesis in enumerative combinatorics and graph theory
+  \item
+    Submitted several classes and bugfixes for Python-based SageMath computer algebra system
+  \end{itemize}
+}
+
+\section{Education}
+\cventry{2007--2012}{Ph.D.\ (Mathematics)}{Brandeis University}{Waltham, MA}{}{}
+
+\cventry{2003--2007}{B.S.\ (Mathematics) \& B.A.\ (Philosophy)}{Mercer University}{Macon, GA}{}{}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
