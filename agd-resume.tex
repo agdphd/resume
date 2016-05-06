@@ -11,7 +11,8 @@
 \usepackage[libertine]{newtxmath}
 \usepackage{inconsolata}
 
-\usepackage{comment}
+\usepackage{xpatch}
+\xpatchcmd{\cventry}{\small}{}{}{}
 
 \let\oldnamefont\namefont
 \renewcommand*{\namefont}{\oldnamefont\sffamily}
@@ -80,15 +81,17 @@ My recent work includes applying computational geometry to RNA folding predictio
   I use Git for nearly every line of code I produce (including my Ph.D.~thesis, my dotfiles, and this r\'{e}sum\'{e}) and have numerous projects on GitHub.
 }
 
+\clearpage
+
 \section{Professional experience}
 \cventry{2015--07/2016}{University postdoctoral fellow}{UConn Health}{Farmington, CT}{}{
   \begin{itemize}
   \item
-    Rewrote \texttt{OCSANA}, a Java/\texttt{Cytoscape} application applying network-theoretic and combinatorial algorithms to problems in systems biology, achieving $10000\times$ speedup on typical inputs
+    Rewrote \texttt{OCSANA}, a Java/\texttt{Cytoscape} application applying network-theoretic and combinatorial algorithms to systems biology, achieving $10000\times$ speedup on typical inputs
   \item
     Implemented custom benchmark framework with Python and Docker to evaluate two dozen algorithms for core combinatorial problem
   \item
-    Implemented several of the above algorithms in C++ and released them as an open-source library
+    Implemented several of the above algorithms in C++ as an open-source library
   \item
     Submitted algorithms and bug fixes to the open-source JGraphT library
   \end{itemize}
@@ -97,7 +100,7 @@ My recent work includes applying computational geometry to RNA folding predictio
 \cventry{2014--2015}{Visiting assistant professor of mathematics}{Hobart and William Smith Colleges}{Geneva, NY}{}{
   \begin{itemize}
   \item
-    Wrote \texttt{pmfe}, a C++ application integrating state-of-the-art RNA folding prediction algorithms with computational geometry and geometric combinatorics to study parameter sensitivity
+    Wrote \texttt{pmfe}, a C++ application integrating RNA folding prediction algorithms with computational geometry and geometric combinatorics to study parameter sensitivity
   \item
     Full-time teaching
   \end{itemize}
