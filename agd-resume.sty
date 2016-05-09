@@ -1,0 +1,55 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{agd-resume}[2016/05/09 AGD custom resume style]
+
+% ModernCV configuration
+\moderncvstyle{casual}
+\moderncvcolor{black}
+
+% Page geometry
+\RequirePackage[margin=.8in,letterpaper]{geometry}
+
+% Custom fonts1
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{libertine}
+\RequirePackage[libertine]{newtxmath}
+\RequirePackage{inconsolata}
+
+% Other useful packages
+\RequirePackage{csquotes}
+\RequirePackage{microtype}
+\RequirePackage{xpatch}
+
+% Custom formatting
+% Use normal text size in entries
+\xpatchcmd{\cventry}{\small}{}{}{}
+
+% Disable hyperlink page numbers
+\nopagenumbers
+\AtEndPreamble{%
+  \AtBeginDocument{%
+    \ifthenelse{\pageref{lastpage}>1}{
+      \newlength{\pagenumberwidth}%
+      \settowidth{\pagenumberwidth}{\color{color2}\addressfont\itshape\thepage/\pageref*{lastpage}}%
+      \fancypagestyle{plain}{%
+        \fancyfoot[r]{\parbox[b]{\pagenumberwidth}{\color{color2}\pagenumberfont\thepage/\pageref*{lastpage}}}}
+      \pagestyle{plain}
+      \AtEndDocument{\label{lastpage}}
+    }{}
+  }
+}
+
+% Use sans-serif font for headers
+\let\oldnamefont\namefont
+\renewcommand*{\namefont}{\oldnamefont\sffamily}
+
+\let\oldtitlefont\titlefont
+\renewcommand*{\titlefont}{\oldtitlefont\sffamily}
+
+\let\oldsectionfont\sectionfont
+\renewcommand*{\sectionfont}{\oldsectionfont\bfseries\sffamily}
+
+\let\oldsubsectionfont\subsectionfont
+\renewcommand*{\subsectionfont}{\oldsubsectionfont\sffamily}
+
+\endinput

@@ -1,48 +1,5 @@
 \documentclass[11pt,colorlinks,urlcolor=blue]{moderncv}
-
-\moderncvstyle{casual}
-\moderncvcolor{black}
-
-\usepackage[margin=.8in,letterpaper]{geometry}
-
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{libertine}
-\usepackage[libertine]{newtxmath}
-\usepackage{inconsolata}
-
-\usepackage{xpatch}
-\xpatchcmd{\cventry}{\small}{}{}{}
-
-\nopagenumbers
-\AtEndPreamble{%
-  \AtBeginDocument{%
-    \ifthenelse{\pageref{lastpage}>1}{
-      \newlength{\pagenumberwidth}%
-      \settowidth{\pagenumberwidth}{\color{color2}\addressfont\itshape\thepage/\pageref*{lastpage}}%
-      \fancypagestyle{plain}{%
-        \fancyfoot[r]{\parbox[b]{\pagenumberwidth}{\color{color2}\pagenumberfont\thepage/\pageref*{lastpage}}}}
-      \pagestyle{plain}
-      \AtEndDocument{\label{lastpage}}
-    }{}
-  }
-}
-
-\let\oldnamefont\namefont
-\renewcommand*{\namefont}{\oldnamefont\sffamily}
-
-\let\oldtitlefont\titlefont
-\renewcommand*{\titlefont}{\oldtitlefont\sffamily}
-
-\let\oldsectionfont\sectionfont
-\renewcommand*{\sectionfont}{\oldsectionfont\bfseries\sffamily}
-
-\let\oldsubsectionfont\subsectionfont
-\renewcommand*{\subsectionfont}{\oldsubsectionfont\sffamily}
-
-\usepackage{csquotes}
-
-\usepackage{microtype}
+\usepackage{agd-resume}
 
 \name{Andrew R.}{Gainer-Dewar, Ph.D.}
 \email{andrew.gainer.dewar@gmail.com}
