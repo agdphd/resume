@@ -14,6 +14,20 @@
 \usepackage{xpatch}
 \xpatchcmd{\cventry}{\small}{}{}{}
 
+\nopagenumbers
+\AtEndPreamble{%
+  \AtBeginDocument{%
+    \ifthenelse{\pageref{lastpage}>1}{
+      \newlength{\pagenumberwidth}%
+      \settowidth{\pagenumberwidth}{\color{color2}\addressfont\itshape\thepage/\pageref*{lastpage}}%
+      \fancypagestyle{plain}{%
+        \fancyfoot[r]{\parbox[b]{\pagenumberwidth}{\color{color2}\pagenumberfont\thepage/\pageref*{lastpage}}}}
+      \pagestyle{plain}
+      \AtEndDocument{\label{lastpage}}
+    }{}
+  }
+}
+
 \let\oldnamefont\namefont
 \renewcommand*{\namefont}{\oldnamefont\sffamily}
 
