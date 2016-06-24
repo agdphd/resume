@@ -1,0 +1,17 @@
+build_image: harshjv/texlive-2015
+
+build:
+  ci:
+    # check texlive version
+    - tlmgr version -v
+    # check which tex packages we have available
+    - tlmgr info --only-installed ||
+        echo "couldn't retrieve the texlive package list!"
+    # Build document
+    - pdflatex -halt-on-error -interaction nonstopmode *.tex
+
+  on_success:
+    # Archive the TeX log files, and any generated output files
+    - cp -f *.pdf $SHIPPABLE_BUILD_DIR
+
+archive: true
